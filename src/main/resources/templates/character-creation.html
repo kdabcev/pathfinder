@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+    <title>Getting Started: Serving Web Content</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+	CHARACTER CREATION
+	
+	<p> Attributes </p>
+    <form action="/character" method="POST">
+	    <table>
+	    	<tr>
+	    		<th>CLASS</th>
+	    		<th>LEVEL</th>
+	    		<th>STR</th>
+	    		<th>DEX</th>
+	    		<th>CON</th>
+	    		<th>INT</th>
+	    		<th>WIS</th>
+	    		<th>CHA</th>
+	    	</tr>
+	    		<td>
+					<select name="characterClassEnum" >
+						<option value="BLOODRAGER">Bloodrager</option>
+						<option value="ROGUE">Rogue</option>
+					</select>
+				</td>
+	    		<td><input type="number" value=1 name="level"></td>
+	    		<td><input type="number" value=10 name="strength"></td>
+	    		<td><input type="number" value=10 name="dexterity"></td>
+	    		<td><input type="number" value=10 name="constitution"></td>
+	    		<td><input type="number" value=10 name="intelligence"></td>
+	    		<td><input type="number" value=10 name="wisdom"></td>
+	    		<td><input type="number" value=10 name="charisma"></td>
+	    	<tr>
+	    		<td><select name="weaponType" >
+					<option th:each="w : ${weapons}" th:value="${w.type}" th:text="${w.type}">
+					</option>
+				</select></td>
+	    	</tr>
+	    </table>  
+	    
+	    <input type="submit" value="Submit">
+    </form>		
+    
+       
+       
+</body>
+</html>

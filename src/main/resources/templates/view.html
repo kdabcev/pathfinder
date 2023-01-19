@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+    <title>Getting Started: Serving Web Content</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+    
+   
+    
+    <p> Attributes </p>
+    <table>
+    	<tr>
+    		<th>STR</th>
+    		<th>DEX</th>
+    		<th>CON</th>
+    		<th>INT</th>
+    		<th>WIS</th>
+    		<th>CHA</th>
+    	</tr>
+    	<tr>
+
+    		<td th:text="${character.strength}"></td>
+    		<td th:text="${character.dexterity}"></td>
+    		<td th:text="${character.constitution}"></td>
+    		<td th:text="${character.intelligence}"></td>
+    		<td th:text="${character.wisdom}"></td>
+    		<td th:text="${character.charisma}"></td>
+    	</tr>
+    </table>
+    
+    <p>Saves</p>
+    
+    <table>
+    	<tr>
+    		<th>Fort</th>
+    		<th>Reflex</th>
+    		<th>Will</th>
+    	</tr>   	
+    	<tr>
+    		<td th:text="${character.fortitude}"></td>
+    		<td th:text="${character.reflex}"></td>
+    		<td th:text="${character.will}"></td>
+    	</tr>
+    </table>
+    
+    <p>To Hit/Dagame/ArmorClass</p>
+    
+    <table>
+    	<tr>
+    		<th>Hit</th>
+    		<th>Damage</th>
+    		<th>ArmorClass</th>
+    	</tr>   	
+    	<tr>
+    		<td th:text="${character.toHit}"></td>
+    		<td th:text="${character.damage}"></td>
+    		<td th:text="${character.armorClass}"></td>
+    	</tr>
+    </table>
+    
+   
+    
+    <form action="activate-ability" method="post">
+    	<input type="submit" name="ability" value="RAGE" />
+	</form>
+	
+	<form action="activate-ability" method="post">
+    	<input type="submit" name="ability" value="POWER_ATTACK" />
+	</form>
+    		
+    
+       
+       
+</body>
+</html>
+
