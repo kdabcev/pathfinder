@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 
 import com.krsto.pathfinder.model.CharacterClassFactory.CharacterClassEnum;
-import com.krsto.pathfinder.model.Weapon.WeaponCategory;
+import com.krsto.pathfinder.model.Weapon.WeaponType;
 
 
 
