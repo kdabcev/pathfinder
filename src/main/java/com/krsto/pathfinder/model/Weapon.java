@@ -2,11 +2,11 @@ package com.krsto.pathfinder.model;
 
 public class Weapon extends Item {
 	
-	private WeaponCategory category;
+	private WeaponType category;
 	private Dice damageDie;
 	private String type;
 
-	public WeaponCategory getCategory() {
+	public WeaponType getWeaponType() {
 		return category;
 	}
 
@@ -21,7 +21,7 @@ public class Weapon extends Item {
 	}
 
 
-	public Weapon(String type, WeaponCategory category, Dice damageDie) {
+	public Weapon(String type, WeaponType category, Dice damageDie) {
 		super();
 		this.type = type;
 		this.category = category;
@@ -29,10 +29,12 @@ public class Weapon extends Item {
 	}
 
 
-	public static enum WeaponCategory {
+	public static enum WeaponType {
 		ONE_HANDED,
 		TWO_HANDED,
-		RANGED
+		LIGHT,
+		ONE_HANDED_RANGED,
+		TWO_HANDED_RANGED,
 		
 	}
 		

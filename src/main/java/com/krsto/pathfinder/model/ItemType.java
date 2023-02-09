@@ -1,6 +1,6 @@
 package com.krsto.pathfinder.model;
 
-public enum SlotType {
+public enum ItemType {
 	HEAD,
 	HEADBAND,
 	EYES,
@@ -8,14 +8,18 @@ public enum SlotType {
 	NECK,
 	CHEST,
 	BODY,
+	
 	ARMOR,
+	
 	BELT,
 	WRISTS,
 	HANDS,
 	RING,
 	FEET,
-	MAIN_HAND,
-	OFF_HAND,
+	
+	WEAPON,
+	
+	SHIELD,
 	SLOTLESS;
 	
 }

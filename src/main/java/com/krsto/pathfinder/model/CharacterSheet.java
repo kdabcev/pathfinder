@@ -54,13 +54,15 @@ public class CharacterSheet {
 		this.attributes.reflex = new Save(Save.Type.REFLEX, level, characterClass.getReflexSaveProgression(), this.attributes.dexterity);
 		this.attributes.will = new Save(Save.Type.WILL, level, characterClass.getWillSaveProgression(), this.attributes.wisdom);		
 
-		this.attributes.damage = new Damage(weapon.getCategory(), this.attributes.strength);
+		this.weapon = ItemRepository.getWeaponByType( buildInfo.getWeaponType() );
+		
+		this.attributes.damage = new Damage(weapon.getWeaponType(), this.attributes.strength);
 		
 		this.attributes.toHit = new ToHit(this.level, this.characterClass.getBabProgression(), this.attributes.strength);
 	
 		this.attributes.armorClass = new ArmorClass(10 + getDexterityModifier());
 		
-		this.weapon = ItemRepository.getWeaponByType( buildInfo.getWeaponType() );
+		
 		
 	}
 

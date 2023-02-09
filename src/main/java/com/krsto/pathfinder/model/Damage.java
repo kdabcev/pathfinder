@@ -4,25 +4,28 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.krsto.pathfinder.model.CharacterSheet.CharacterAttributes;
-import com.krsto.pathfinder.model.Weapon.WeaponCategory;
+import com.krsto.pathfinder.model.Weapon.WeaponType;
 
 public class Damage extends BonusTargetTemplate {
 	
 	private AbilityScore abilityScore;
-	private WeaponCategory weaponCategory;
+	private WeaponType weaponCategory;
 	
 	
 	public int mainHand() {
 		
 		
 		
-		if (weaponCategory == WeaponCategory.ONE_HANDED) {
+		if (weaponCategory == WeaponType.ONE_HANDED) {
 			return abilityScore.getTotalModifier();
 		}
-		if (weaponCategory == WeaponCategory.TWO_HANDED) {
+		if (weaponCategory == WeaponType.TWO_HANDED) {
 			return (int) (abilityScore.getTotalModifier() * 1.5);
 		}
-		if (weaponCategory == WeaponCategory.RANGED){
+		if (weaponCategory == WeaponType.ONE_HANDED_RANGED){
+			return 0;
+		}
+		if (weaponCategory == WeaponType.TWO_HANDED_RANGED){
 			return 0;
 		}
 		throw new RuntimeException("Choose 1 for One handed or 2 for Two handed");
@@ -30,7 +33,7 @@ public class Damage extends BonusTargetTemplate {
 			
 	}
 	
-	public Damage (WeaponCategory weaponCategory, AbilityScore abilityScore) {
+	public Damage (WeaponType weaponCategory, AbilityScore abilityScore) {
 		this.weaponCategory = weaponCategory;
 		this.abilityScore = abilityScore;
 		

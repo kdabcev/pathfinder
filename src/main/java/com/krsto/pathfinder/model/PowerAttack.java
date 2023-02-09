@@ -33,7 +33,7 @@ public class PowerAttack extends ActivateableAbility {
 		targets.add(Damage.getDesignation());
 		
 		int categoryMultiplier = 2;
-		if (characterSheet.getWeapon().getCategory() == Weapon.WeaponCategory.TWO_HANDED) {
+		if (characterSheet.getWeapon().getWeaponType() == Weapon.WeaponType.TWO_HANDED) {
 			categoryMultiplier = 3;
 		}
 		

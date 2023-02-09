@@ -69,6 +69,15 @@
 	<form action="activate-ability" method="post">
     	<input type="submit" name="ability" value="POWER_ATTACK" />
 	</form>
+	
+	 <p> Equipment </p>
+	 
+	 <form action="character-equipment" method="post">
+	 	<select name="weaponType" >
+					<option th:each="w : ${weapons}" th:value="${w.type}" th:text="${w.type}">
+					</option>
+				</select>
+	 </form>
     		
     
        

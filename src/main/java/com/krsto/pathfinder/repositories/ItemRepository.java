@@ -6,15 +6,15 @@ import java.util.List;
 
 import com.krsto.pathfinder.model.Dice;
 import com.krsto.pathfinder.model.Weapon;
-import com.krsto.pathfinder.model.Weapon.WeaponCategory;
+import com.krsto.pathfinder.model.Weapon.WeaponType;
 
 public class ItemRepository {
 
 	public static List<Weapon> getWeapons() {
 		List<Weapon> weapons = new ArrayList<Weapon>();
-		weapons.add(new Weapon("Greataxe", WeaponCategory.TWO_HANDED, Dice.d12()));
-		weapons.add(new Weapon("Greatsword", WeaponCategory.TWO_HANDED, Dice.other(2, 6)));
-		weapons.add(new Weapon("Dagger", WeaponCategory.ONE_HANDED, Dice.d4()));
+		weapons.add(new Weapon("Greataxe", WeaponType.TWO_HANDED, Dice.d12()));
+		weapons.add(new Weapon("Greatsword", WeaponType.TWO_HANDED, Dice.other(2, 6)));
+		weapons.add(new Weapon("Dagger", WeaponType.ONE_HANDED, Dice.d4()));
 		return weapons;
 	}
 	
