@@ -45,7 +45,7 @@
     	</tr>
     </table>
     
-    <p>To Hit/Dagame/ArmorClass</p>
+    <p>To Hit/Damage/ArmorClass</p>
     
     <table>
     	<tr>
@@ -67,13 +67,15 @@
 	</form>
 	
 	<form action="activate-ability" method="post">
-    	<input type="submit" name="ability" value="POWER_ATTACK" />
+    	<input type=submit name="ability" value="POWER_ATTACK"  />
 	</form>
 	
 	 <p> Equipment </p>
 	 
-	 <form action="character-equipment" method="post">
-	 	<select name="weaponType" >
+	 <p> weapon: <span th:text="${character.weapon.type}"></span> </p>
+	 
+	 <form action="character-equipment" method="post" >
+	 	<select name="weaponType" onchange="this.form.submit()">
 			<option th:each="w : ${weapons}" th:value="${w.type}" th:text="${w.type}">
 			</option>
 		</select>
