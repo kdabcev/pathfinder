@@ -201,5 +201,12 @@ public class CharacterSheet {
 		return weapon;
 	}
 	
+	public void equipWeapon(Weapon weapon){
+		this.weapon = weapon;
+		
+		this.attributes.damage = new Damage(weapon.getWeaponType(), this.attributes.strength);
+		
+		this.attributes.toHit = new ToHit(this.level, this.characterClass.getBabProgression(), this.attributes.strength);
+	}
 
 }

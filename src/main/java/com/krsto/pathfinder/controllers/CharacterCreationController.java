@@ -38,6 +38,7 @@ public class CharacterCreationController {
 		characterSheet.initialize(buildInfo);
 		
 		mav.addObject("character", characterSheet);
+		mav.addObject("weapons", ItemRepository.getWeapons());
 		
 		session.setAttribute("character", characterSheet);
 		
