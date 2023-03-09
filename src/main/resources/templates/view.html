@@ -75,7 +75,7 @@
 	 <p> weapon: <span th:text="${character.weapon.type}"></span> </p>
 	 
 	 <form action="character-equipment" method="post" >
-	 	<select name="weaponType" onchange="this.form.submit()">
+	 	<select onchange="this.form.submit()"  th:field="${character.weapon.type}" >
 			<option th:each="w : ${weapons}" th:value="${w.type}" th:text="${w.type}">
 			</option>
 		</select>

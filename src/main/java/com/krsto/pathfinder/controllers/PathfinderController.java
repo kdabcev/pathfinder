@@ -42,7 +42,7 @@ public class PathfinderController {
 	}
 	
 	@PostMapping(path="/character-equipment")
-	public ModelAndView characterEquipment(@ModelAttribute("weaponType") String weaponType, HttpSession session) {
+	public ModelAndView characterEquipment(@ModelAttribute("weapon.type") String weaponType, HttpSession session) {
 		
 		CharacterSheet characterSheet = (CharacterSheet) session.getAttribute("character");
 		

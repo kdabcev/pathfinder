@@ -60,7 +60,7 @@ public class CharacterSheet {
 		
 		this.attributes.toHit = new ToHit(this.level, this.characterClass.getBabProgression(), this.attributes.strength);
 	
-		this.attributes.armorClass = new ArmorClass(10 + getDexterityModifier());
+		this.attributes.armorClass = new ArmorClass(getDexterityModifier());
 		
 		
 		
